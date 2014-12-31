@@ -1,7 +1,7 @@
- <style>
 #header {
     background-color:black;
     color:white;
+    clear:both;
     text-align:center;
     padding:5px;
 }
@@ -88,4 +88,3 @@
 #GestureDisplayXffff66 { border:2px solid #ffff66; background-color:#ffff66;  max-width: 100px; float: left}
 #GestureDisplayXffffcc { border:2px solid #ffffcc; background-color:#ffffcc;  max-width: 100px; float: left}
 #GestureDisplayXffffff { border:2px solid #ffffff; background-color:#ffffff;  max-width: 100px; float: left}
-</style> 
