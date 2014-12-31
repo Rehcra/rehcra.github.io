@@ -1,0 +1,136 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<title>RPS-101 Clicker</title>
+	</head>
+	<body>
+		<button onclick="cookieClick(1)">Click Me!</button>
+		<br>
+		Cookies: <span id="cookies">0</span>
+		<br>
+		<button onclick="buyCursor()">Buy Cursor</button>
+		<br>
+		Cursors: <span id="cursors">0</span>
+		<br>
+		Cursor Cost: <span id="cursorCost">10</span>
+		<br>
+
+		<div id='GestureDisplay'>
+			<div class='GestureDisplayXffaa00'><center><img src='PNG/001.PNG' alt='DYNAMITE' height='80' width='80' /><br><font color='ff0000' size='-1'><b>DYNAMITE</b></font><br></center></div>
+			<div class='GestureDisplayXccbb00'><center><img src='PNG/002.PNG' alt='TORNADO' height='80' width='80' /><br><font color='cc3300' size='-1'><b>TORNADO</b></font><br></center></div>
+			<div class='GestureDisplayXaaaa88'><center><img src='PNG/003.PNG' alt='QUICKSAND' height='80' width='80' /><br><font color='555522' size='-1'><b>QUICKSAND</b></font><br></center></div>
+			<div class='GestureDisplayX330000'><center><img src='PNG/004.PNG' alt='PIT' height='80' width='80' /><br><font color='aa0000' size='-1'><b>PIT</b></font><br></center></div>
+			<div class='GestureDisplayXccccff'><center><img src='PNG/005.PNG' alt='CHAIN' height='80' width='80' /><br><font color='8888ff' size='-1'><b>CHAIN</b></font><br></center></div>
+			<div class='GestureDisplayX777777'><center><img src='PNG/006.PNG' alt='GUN' height='80' width='80' /><br><font color='222222' size='-1'><b>GUN</b></font><br></center></div>
+			<div class='GestureDisplayXff0000'><center><img src='PNG/007.PNG' alt='LAW' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>LAW</b></font><br></center></div>
+			<div class='GestureDisplayX663366'><center><img src='PNG/008.PNG' alt='WHIP' height='80' width='80' /><br><font color='FFCC00' size='-1'><b>WHIP</b></font><br></center></div>
+			<div class='GestureDisplayX666699'><center><img src='PNG/009.PNG' alt='SWORD' height='80' width='80' /><br><font color='CCCCFF' size='-1'><b>SWORD</b></font><br></center></div>
+			<div class='GestureDisplayX336600'><center><img src='PNG/010.PNG' alt='ROCK' height='80' width='80' /><br><font color='CCCCCC' size='-1'><b>ROCK</b></font><br></center></div>
+			<div class='GestureDisplayX444444'><center><img src='PNG/011.PNG' alt='DEATH' height='80' width='80' /><br><font color='000000' size='-1'><b>DEATH</b></font><br></center></div>
+			<div class='GestureDisplayX888888'><center><img src='PNG/012.PNG' alt='WALL' height='80' width='80' /><br><font color='000000' size='-1'><b>WALL</b></font><br></center></div>
+			<div class='GestureDisplayXffff00'><center><img src='PNG/013.PNG' alt='SUN' height='80' width='80' /><br><font color='999900' size='-1'><b>SUN</b></font><br></center></div>
+			<div class='GestureDisplayX3333cc'><center><img src='PNG/014.PNG' alt='CAMERA' height='80' width='80' /><br><font color='FFFF00' size='-1'><b>CAMERA</b></font><br></center></div>
+			<div class='GestureDisplayXff6600'><center><img src='PNG/015.PNG' alt='FIRE' height='80' width='80' /><br><font color='FFFF00' size='-1'><b>FIRE</b></font><br></center></div>
+			<div class='GestureDisplayXcc0000'><center><img src='PNG/016.PNG' alt='CHAINSAW' height='80' width='80' /><br><font color='9999FF' size='-1'><b>CHAINSAW</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/017.PNG' alt='SCHOOL' height='80' width='80' /><br><font color='0000FF' size='-1'><b>SCHOOL</b></font><br></center></div>
+			<div class='GestureDisplayXff3300'><center><img src='PNG/018.PNG' alt='SCISSORS' height='80' width='80' /><br><font color='FFFF66' size='-1'><b>SCISSORS</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/019.GIF' alt='POISON' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>POISON</b></font><br></center></div>
+			<div class='GestureDisplayX000033'><center><img src='PNG/020.PNG' alt='CAGE' height='80' width='80' /><br><font color='6666ff' size='-1'><b>CAGE</b></font><br></center></div>
+			<div class='GestureDisplayX66ff99'><center><img src='PNG/021.PNG' alt='AXE' height='80' width='80' /><br><font color='990000' size='-1'><b>AXE</b></font><br></center></div>
+			<div class='GestureDisplayXffffcc'><center><img src='PNG/022.PNG' alt='PEACE' height='80' width='80' /><br><font color='6666FF' size='-1'><b>PEACE</b></font><br></center></div>
+			<div class='GestureDisplayX006600'><center><img src='PNG/023.PNG' alt='COMPUTER' height='80' width='80' /><br><font color='00FF00' size='-1'><b>COMPUTER</b></font><br></center></div>
+			<div class='GestureDisplayX666666'><center><img src='PNG/024.PNG' alt='CASTLE' height='80' width='80' /><br><font color='000000' size='-1'><b>CASTLE</b></font><br></center></div>
+			<div class='GestureDisplayX006600'><center><img src='PNG/025.PNG' alt='SNAKE' height='80' width='80' /><br><font color='00AA00' size='-1'><b>SNAKE</b></font><br></center></div>
+			<div class='GestureDisplayX990000'><center><img src='PNG/026.PNG' alt='BLOOD' height='80' width='80' /><br><font color='FF0000' size='-1'><b>BLOOD</b></font><br></center></div>
+			<div class='GestureDisplayX663300'><center><img src='PNG/027.PNG' alt='PORCUPINE' height='80' width='80' /><br><font color='9966FF' size='-1'><b>PORCUPINE</b></font><br></center></div>
+			<div class='GestureDisplayX441100'><center><img src='PNG/028.PNG' alt='VULTURE' height='80' width='80' /><br><font color='774400' size='-1'><b>VULTURE</b></font><br></center></div>
+			<div class='GestureDisplayXff0000'><center><img src='PNG/029.PNG' alt='MONKEY' height='80' width='80' /><br><font color='000000' size='-1'><b>MONKEY</b></font><br></center></div>
+			<div class='GestureDisplayX330033'><center><img src='PNG/030.PNG' alt='KING' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>KING</b></font><br></center></div>
+			<div class='GestureDisplayX660066'><center><img src='PNG/031.PNG' alt='QUEEN' height='80' width='80' /><br><font color='FF33FF' size='-1'><b>QUEEN</b></font><br></center></div>
+			<div class='GestureDisplayX000066'><center><img src='PNG/032.PNG' alt='PRINCE' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>PRINCE</b></font><br></center></div>
+			<div class='GestureDisplayXcc33cc'><center><img src='PNG/033.PNG' alt='PRINCESS' height='80' width='80' /><br><font color='FFCCFF' size='-1'><b>PRINCESS</b></font><br></center></div>
+			<div class='GestureDisplayXccccff'><center><img src='PNG/034.PNG' alt='POLICE' height='80' width='80' /><br><font color='000000' size='-1'><b>POLICE</b></font><br></center></div>
+			<div class='GestureDisplayXff99ff'><center><img src='PNG/035.PNG' alt='WOMAN' height='80' width='80' /><br><font color='9900FF' size='-1'><b>WOMAN</b></font><br></center></div>
+			<div class='GestureDisplayXccccff'><center><img src='PNG/036.GIF' alt='BABY' height='80' width='80' /><br><font color='FF33FF' size='-1'><b>BABY</b></font><br></center></div>
+			<div class='GestureDisplayX3333ff'><center><img src='PNG/037.PNG' alt='MAN' height='80' width='80' /><br><font color='000099' size='-1'><b>MAN</b></font><br></center></div>
+			<div class='GestureDisplayX66cc00'><center><img src='PNG/038.PNG' alt='HOME' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>HOME</b></font><br></center></div>
+			<div class='GestureDisplayX333333'><center><img src='PNG/039.PNG' alt='TRAIN' height='80' width='80' /><br><font color='CCCCFF' size='-1'><b>TRAIN</b></font><br></center></div>
+			<div class='GestureDisplayX660000'><center><img src='PNG/040.GIF' alt='CAR' height='80' width='80' /><br><font color='33FFFF' size='-1'><b>CAR</b></font><br></center></div>
+			<div class='GestureDisplayX9900cc'><center><img src='PNG/041.PNG' alt='NOISE' height='80' width='80' /><br><font color='66FF00' size='-1'><b>NOISE</b></font><br></center></div>
+			<div class='GestureDisplayXbbbbff'><center><img src='PNG/042.PNG' alt='BICYCLE' height='80' width='80' /><br><font color='FF0000' size='-1'><b>BICYCLE</b></font><br></center></div>
+			<div class='GestureDisplayX669900'><center><img src='PNG/043.PNG' alt='TREE' height='80' width='80' /><br><font color='663300' size='-1'><b>TREE</b></font><br></center></div>
+			<div class='GestureDisplayXcc99ff'><center><img src='PNG/044.PNG' alt='TURNIP' height='80' width='80' /><br><font color='336600' size='-1'><b>TURNIP</b></font><br></center></div>
+			<div class='GestureDisplayXffff66'><center><img src='PNG/045.PNG' alt='DUCK' height='80' width='80' /><br><font color='CC6600' size='-1'><b>DUCK</b></font><br></center></div>
+			<div class='GestureDisplayX993300'><center><img src='PNG/046.PNG' alt='WOLF' height='80' width='80' /><br><font color='CCCCCC' size='-1'><b>WOLF</b></font><br></center></div>
+			<div class='GestureDisplayXff9900'><center><img src='PNG/047.PNG' alt='CAT' height='80' width='80' /><br><font color='666666' size='-1'><b>CAT</b></font><br></center></div>
+			<div class='GestureDisplayX666633'><center><img src='PNG/048.PNG' alt='BIRD' height='80' width='80' /><br><font color='CCCCCC' size='-1'><b>BIRD</b></font><br></center></div>
+			<div class='GestureDisplayX006666'><center><img src='PNG/049.GIF' alt='FISH' height='80' width='80' /><br><font color='CCCC66' size='-1'><b>FISH</b></font><br></center></div>
+			<div class='GestureDisplayX330033'><center><img src='PNG/050.PNG' alt='SPIDER' height='80' width='80' /><br><font color='FF0000' size='-1'><b>SPIDER</b></font><br></center></div>
+			<div class='GestureDisplayX66cc00'><center><img src='PNG/051.PNG' alt='COCKROACH' height='80' width='80' /><br><font color='666600' size='-1'><b>COCKROACH</b></font><br></center></div>
+			<div class='GestureDisplayXcccccc'><center><img src='PNG/052.PNG' alt='BRAIN' height='80' width='80' /><br><font color='996666' size='-1'><b>BRAIN</b></font><br></center></div>
+			<div class='GestureDisplayX99ffff'><center><img src='PNG/053.PNG' alt='COMMUNITY' height='80' width='80' /><br><font color='666600' size='-1'><b>COMMUNITY</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/054.PNG' alt='CROSS' height='80' width='80' /><br><font color='FFCC00' size='-1'><b>CROSS</b></font><br></center></div>
+			<div class='GestureDisplayXccffcc'><center><img src='PNG/055.GIF' alt='MONEY' height='80' width='80' /><br><font color='003300' size='-1'><b>MONEY</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/056.PNG' alt='VAMPIRE' height='80' width='80' /><br><font color='CC33FF' size='-1'><b>VAMPIRE</b></font><br></center></div>
+			<div class='GestureDisplayXffccff'><center><img src='PNG/057.PNG' alt='SPONGE' height='80' width='80' /><br><font color='CC33FF' size='-1'><b>SPONGE</b></font><br></center></div>
+			<div class='GestureDisplayX666666'><center><img src='PNG/058.PNG' alt='CHURCH' height='80' width='80' /><br><font color='FFCC00' size='-1'><b>CHURCH</b></font><br></center></div>
+			<div class='GestureDisplayXffff00'><center><img src='PNG/059.PNG' alt='BUTTER' height='80' width='80' /><br><font color='CC9900' size='-1'><b>BUTTER</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/060.PNG' alt='BOOK' height='80' width='80' /><br><font color='000000' size='-1'><b>BOOK</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/061.PNG' alt='PAPER' height='80' width='80' /><br><font color='FF99FF' size='-1'><b>PAPER</b></font><br></center></div>
+			<div class='GestureDisplayX00ccff'><center><img src='PNG/062.PNG' alt='CLOUD' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>CLOUD</b></font><br></center></div>
+			<div class='GestureDisplayX999999'><center><img src='PNG/063.PNG' alt='AIRPLANE' height='80' width='80' /><br><font color='CCFFFF' size='-1'><b>AIRPLANE</b></font><br></center></div>
+			<div class='GestureDisplayX333366'><center><img src='PNG/064.PNG' alt='MOON' height='80' width='80' /><br><font color='FFFF00' size='-1'><b>MOON</b></font><br></center></div>
+			<div class='GestureDisplayXcccc00'><center><img src='PNG/065.PNG' alt='GRASS' height='80' width='80' /><br><font color='666600' size='-1'><b>GRASS</b></font><br></center></div>
+			<div class='GestureDisplayXcccccc'><center><img src='PNG/066.PNG' alt='FILM' height='80' width='80' /><br><font color='666666' size='-1'><b>FILM</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/067.PNG' alt='TOILET' height='80' width='80' /><br><font color='663300' size='-1'><b>TOILET</b></font><br></center></div>
+			<div class='GestureDisplayXccffff'><center><img src='PNG/068.PNG' alt='AIR' height='80' width='80' /><br><font color='3399FF' size='-1'><b>AIR</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/069.PNG' alt='PLANET' height='80' width='80' /><br><font color='3399FF' size='-1'><b>PLANET</b></font><br></center></div>
+			<div class='GestureDisplayX996600'><center><img src='PNG/070.PNG' alt='GUITAR' height='80' width='80' /><br><font color='FFCC00' size='-1'><b>GUITAR</b></font><br></center></div>
+			<div class='GestureDisplayXccffff'><center><img src='PNG/071.PNG' alt='BOWL' height='80' width='80' /><br><font color='990066' size='-1'><b>BOWL</b></font><br></center></div>
+			<div class='GestureDisplayX99cccc'><center><img src='PNG/072.PNG' alt='CUP' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>CUP</b></font><br></center></div>
+			<div class='GestureDisplayXff6600'><center><img src='PNG/073.PNG' alt='BEER' height='80' width='80' /><br><font color='FFFF66' size='-1'><b>BEER</b></font><br></center></div>
+			<div class='GestureDisplayXcccccc'><center><img src='PNG/074.PNG' alt='RAIN' height='80' width='80' /><br><font color='6666FF' size='-1'><b>RAIN</b></font><br></center></div>
+			<div class='GestureDisplayX003366'><center><img src='PNG/075.PNG' alt='WATER' height='80' width='80' /><br><font color='9999FF' size='-1'><b>WATER</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/076.GIF' alt='TV' height='80' width='80' /><br><font color='00FFFF' size='-1'><b>TV</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/077.PNG' alt='RAINBOW' height='80' width='80' /><br><font color='CC33FF' size='-1'><b>RAINBOW</b></font><br></center></div>
+			<div class='GestureDisplayX660066'><center><img src='PNG/078.PNG' alt='UFO' height='80' width='80' /><br><font color='66FF00' size='-1'><b>UFO</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/079.PNG' alt='ALIEN' height='80' width='80' /><br><font color='00AA00' size='-1'><b>ALIEN</b></font><br></center></div>
+			<div class='GestureDisplayXffffff'><center><img src='PNG/080.PNG' alt='PRAYER' height='80' width='80' /><br><font color='99CCFF' size='-1'><b>PRAYER</b></font><br></center></div>
+			<div class='GestureDisplayX993300'><center><img src='PNG/081.PNG' alt='MOUNTAIN' height='80' width='80' /><br><font color='999900' size='-1'><b>MOUNTAIN</b></font><br></center></div>
+			<div class='GestureDisplayX330000'><center><img src='PNG/082.PNG' alt='SATAN' height='80' width='80' /><br><font color='FF0000' size='-1'><b>SATAN</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/083.PNG' alt='DRAGON' height='80' width='80' /><br><font color='FF6600' size='-1'><b>DRAGON</b></font><br></center></div>
+			<div class='GestureDisplayX00ffff'><center><img src='PNG/084.PNG' alt='DIAMOND' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>DIAMOND</b></font><br></center></div>
+			<div class='GestureDisplayXcccccc'><center><img src='PNG/085.GIF' alt='PLATINUM' height='80' width='80' /><br><font color='666666' size='-1'><b>PLATINUM</b></font><br></center></div>
+			<div class='GestureDisplayXffff00'><center><img src='PNG/086.GIF' alt='GOLD' height='80' width='80' /><br><font color='CC9900' size='-1'><b>GOLD</b></font><br></center></div>
+			<div class='GestureDisplayX660066'><center><img src='PNG/087.PNG' alt='DEVIL' height='80' width='80' /><br><font color='FFCC00' size='-1'><b>DEVIL</b></font><br></center></div>
+			<div class='GestureDisplayX339900'><center><img src='PNG/088.PNG' alt='FENCE' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>FENCE</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/089.GIF' alt='VIDEO GAME' height='80' width='80' /><br><font color='99CCFF' size='-1'><b>VIDEO GAME</b></font><br></center></div>
+			<div class='GestureDisplayX0000ff'><center><img src='PNG/090.PNG' alt='MATH' height='80' width='80' /><br><font color='00FF00' size='-1'><b>MATH</b></font><br></center></div>
+			<div class='GestureDisplayX330033'><center><img src='PNG/091.GIF' alt='ROBOT' height='80' width='80' /><br><font color='CCCCFF' size='-1'><b>ROBOT</b></font><br></center></div>
+			<div class='GestureDisplayX660000'><center><img src='PNG/092.PNG' alt='HEART' height='80' width='80' /><br><font color='FF0000' size='-1'><b>HEART</b></font><br></center></div>
+			<div class='GestureDisplayX3333ff'><center><img src='PNG/093.PNG' alt='ELECTRICITY' height='80' width='80' /><br><font color='CCFF00' size='-1'><b>ELECTRICITY</b></font><br></center></div>
+			<div class='GestureDisplayXcc99ff'><center><img src='PNG/094.PNG' alt='LIGHTNING' height='80' width='80' /><br><font color='FFFFFF' size='-1'><b>LIGHTNING</b></font><br></center></div>
+			<div class='GestureDisplayX336666'><center><img src='PNG/095.PNG' alt='MEDUSA' height='80' width='80' /><br><font color='CCCC00' size='-1'><b>MEDUSA</b></font><br></center></div>
+			<div class='GestureDisplayXff0000'><center><img src='PNG/096.PNG' alt='POWER' height='80' width='80' /><br><font color='FFFF66' size='-1'><b>POWER</b></font><br></center></div>
+			<div class='GestureDisplayX000066'><center><img src='PNG/097.PNG' alt='LASER' height='80' width='80' /><br><font color='99FF00' size='-1'><b>LASER</b></font><br></center></div>
+			<div class='GestureDisplayX000000'><center><img src='PNG/098.PNG' alt='NUKE' height='80' width='80' /><br><font color='FF9900' size='-1'><b>NUKE</b></font><br></center></div>
+			<div class='GestureDisplayX3399ff'><center><img src='PNG/099.PNG' alt='SKY' height='80' width='80' /><br><font color='99CCFF' size='-1'><b>SKY</b></font><br></center></div>
+			<div class='GestureDisplayX666666'><center><img src='PNG/100.PNG' alt='TANK' height='80' width='80' /><br><font color='CC6600' size='-1'><b>TANK</b></font><br></center></div>
+			<div class='GestureDisplayXcc99ff'><center><img src='PNG/101.PNG' alt='HELICOPTER' height='80' width='80' /><br><font color='666666' size='-1'><b>HELICOPTER</b></font><br></center></div>
+		</div>
+		
+		</p><p>
+			<center>
+				<font color="FFFFFF" size="-1">
+				RPS Graphics are (c)2006 David C. Lovelace<br>
+				Currently used without permission<br>
+				Check out the original inspiration <br>
+				</font>
+				<a href="http://www.umop.com/rps101/alloutcomes.htm"><font color="FFFFFF" size="-1">Click here for <b>ALL 5,050 OUTCOMES</b></font></a><br><br>
+				<a href="http://www.umop.com/rps101.htm"><font color="FFFFFF" size="-2">RPS-101</font></a><br>
+			</center>
+		</p>
+
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
